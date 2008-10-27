@@ -4,6 +4,9 @@ chomp(@ARGV[0]);
 $pass = 1;
 foreach(@md6files)
 {
+    if($_=~m/CVS/) {
+	next;
+    }
    chomp($_);
 
   print $_; 
